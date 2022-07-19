@@ -54,6 +54,7 @@ class PostController extends Controller
         $comment1= new Comment([ "content"=>"premier commentaire"]);
 
         $post->comments()->save($comment1 );
+        $post->comments()->SaveMany([new Comment([ "content"=>"deuxieme commentaire"]) , new Comment([ "content"=>"troisieme commentaire"])]);
 
     }
 
