@@ -1,5 +1,7 @@
 <?php
 namespace App\Http\Controllers;
+
+use App\Models\Comment;
 use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -44,6 +46,15 @@ class PostController extends Controller
 
     public function contact(){
         return view('contact');
+    }
+    public function register(){
+        $post=Post::find(1);
+      //  dd($post);
+
+        $comment1= new Comment([ "content"=>"premier commentaire"]);
+
+        $post->comments()->save($comment1 );
+
     }
 
 }

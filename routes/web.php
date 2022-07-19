@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\PostController;
+use App\Models\Comment;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,3 +22,4 @@ Route::get('/posts/{id}','App\Http\Controllers\PostController@show')->name('post
 Route::get('/contact','App\Http\Controllers\PostController@contact')->name('contact');
 Route::get('/livres/create', 'App\Http\Controllers\Bookcontroller@create')->name('books.create');
 Route::post('/livres', 'App\Http\Controllers\Bookcontroller@store')->name('books.store');
+Route::get('/register' , [PostController::class , 'register']);

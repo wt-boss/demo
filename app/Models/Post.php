@@ -10,10 +10,10 @@ class Post extends Model
     use HasFactory;
     protected $fillable = ['title' , 'content'];
 
-    public function comments()
+/*     public function comments()
     {
         return $this->hasMany(Comment::class);
-    }
+    } */
     public function image(){
         return $this->hasOne(image::class);
     }
@@ -21,5 +21,9 @@ class Post extends Model
     public function tags()
     {
         return $this->belongsToMany(Tag::class);
+    }
+
+    public function comments(){
+        return $this->morphMany(Comment::class , "commentable");
     }
 }

@@ -23,4 +23,9 @@
         
     @endforelse
 
+    @isset($post->imageArtiste())
+            <span>{{$post->imageArtiste->name}}</span>
+        
+    @endisset
+
 @endsection
