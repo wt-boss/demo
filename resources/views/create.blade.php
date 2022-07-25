@@ -24,7 +24,12 @@
     @enderror
     <textarea name="content" id="" cols="30" rows="10" class="border-blue-600 border-2"></textarea>
     <button type="submit"  value="create" class="border-2 border-blue-400">CREATE</button>
+     <br>
+     <label for="avatar">Choose a profile picture:</label>
 
+    <input type="file"
+       id="avatar" name="avatar"
+       accept="image/png, image/jpeg">
 
 </form>
 
